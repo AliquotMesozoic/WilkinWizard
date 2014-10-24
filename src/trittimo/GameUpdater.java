@@ -1,16 +1,13 @@
 package trittimo;
 
-import java.util.ArrayList;
 
 public class GameUpdater implements Runnable {
 	public static final int SLEEP_MS = 33;
 
 	private WizardPanel panel;
-	private ArrayList<AbstractEntity> entities;
 
-	public GameUpdater(WizardPanel panel, ArrayList<AbstractEntity> entities) {
+	public GameUpdater(WizardPanel panel) {
 		this.panel = panel;
-		this.entities = entities;
 	}
 
 	@Override
@@ -18,9 +15,6 @@ public class GameUpdater implements Runnable {
 		try {
 			while (true) {
 				Thread.sleep(SLEEP_MS);
-				for (AbstractEntity entity : this.entities) {
-					entity.repaint();
-				}
 				this.panel.repaint();
 			}
 		} catch (Exception e) {

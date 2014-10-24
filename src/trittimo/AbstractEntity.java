@@ -1,19 +1,20 @@
 package trittimo;
 
 import java.awt.Graphics;
-import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 
 import javax.swing.JComponent;
 
-public class AbstractEntity extends JComponent {
+public abstract class AbstractEntity extends JComponent {
+	protected abstract BufferedImage getSprite();
+
+	public AbstractEntity() {
+
+	}
 
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-
-		Graphics2D g2 = (Graphics2D) g;
-
-		g2.fillRect(15, 15, 100, 100);
 	}
 
 	@Override
