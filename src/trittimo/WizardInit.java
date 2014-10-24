@@ -6,12 +6,16 @@ public class WizardInit {
 	public static final double version = 0.1;
 
 	public static void main(String[] args) {
-		JFrame myFrame = new JFrame("Wilkin Wizard Version " + version);
+		JFrame frame = new JFrame("Wilkin Wizard Version " + version);
 
-		myFrame.setSize(500, 500);
-		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(500, 500);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		myFrame.setVisible(true);
+		WizardPanel panel = new WizardPanel();
+
+		frame.add(panel);
+
+		frame.setVisible(true);
 
 	}
 
