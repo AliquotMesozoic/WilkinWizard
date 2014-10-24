@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class WizardPanel extends JPanel {
 
-	private ArrayList<AbstractEntity> entities = new ArrayList<AbstractEntity>();
+	private ArrayList<SpriteEntity> entities = new ArrayList<SpriteEntity>();
 
 	public WizardPanel() {
 		GameUpdater updater = new GameUpdater(this);
@@ -17,12 +17,12 @@ public class WizardPanel extends JPanel {
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		for (AbstractEntity entity : this.entities) {
+		for (SpriteEntity entity : this.entities) {
 			entity.paintComponent(g);
 		}
 	}
 
-	public void addEntity(AbstractEntity entity) {
+	public void addEntity(SpriteEntity entity) {
 		this.entities.add(entity);
 		this.add(entity);
 	}

@@ -1,16 +1,13 @@
 package trittimo;
 
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import javax.swing.JComponent;
-
-public abstract class AbstractEntity extends JComponent {
+public abstract class SpriteEntity extends Entity {
 	protected abstract BufferedImage getSprite();
 
-	public AbstractEntity() {
-
-	}
+	protected abstract Dimension getSpriteSize();
 
 	@Override
 	public void paintComponent(Graphics g) {

@@ -13,7 +13,7 @@ public class WizardInit {
 
 		WizardPanel panel = new WizardPanel();
 		panel.addEntity(new WilkinWizard());
-		panel.addEntity(new WizardPanel());
+		panel.addEntity(new CageSorcerer());
 
 		frame.add(panel);
 
