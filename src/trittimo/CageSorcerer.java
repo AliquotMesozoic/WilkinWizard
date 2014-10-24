@@ -2,32 +2,27 @@ package trittimo;
 
 import java.awt.Dimension;
 import java.awt.Point;
-import java.awt.image.BufferedImage;
 
 public class CageSorcerer extends SpriteEntity {
+	private static final String CAGE_IMG_PATH = "cage-sorcerer.png";
 
-	@Override
-	protected BufferedImage getSprite() {
-		// TODO Auto-generated method stub
-		return null;
+	private Dimension size = new Dimension(100, 100);
+	private Point position = new Point(300, 300);
+
+	public CageSorcerer() {
+		setSize(this.size);
+		setPosition(this.position);
 	}
 
 	@Override
-	protected double getRotation() {
-		// TODO Auto-generated method stub
-		return 0;
+	protected String getSpritePath() {
+		return CAGE_IMG_PATH;
 	}
 
 	@Override
-	protected Dimension getSpriteSize() {
+	public void update() {
 		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	protected Point getPosition() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 }

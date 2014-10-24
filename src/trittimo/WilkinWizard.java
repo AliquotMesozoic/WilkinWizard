@@ -2,32 +2,26 @@ package trittimo;
 
 import java.awt.Dimension;
 import java.awt.Point;
-import java.awt.image.BufferedImage;
 
 public class WilkinWizard extends SpriteEntity {
+	private static final String WILKIN_IMG_PATH = "wilkin-wizard.png";
 
-	@Override
-	protected BufferedImage getSprite() {
-		// TODO Auto-generated method stub
-		return null;
+	private Dimension size = new Dimension(100, 100);
+	private Point position = new Point(30, 30);
+
+	public WilkinWizard() {
+		setSize(this.size);
+		setPosition(this.position);
 	}
 
 	@Override
-	protected double getRotation() {
-		// TODO Auto-generated method stub
-		return 0;
+	protected String getSpritePath() {
+		return WILKIN_IMG_PATH;
 	}
 
 	@Override
-	protected Dimension getSpriteSize() {
-		// TODO Auto-generated method stub
-		return null;
+	public void update() {
+		System.out.println("hi");
+		setRotation(getRotation() + Math.PI / 20);
 	}
-
-	@Override
-	protected Point getPosition() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
