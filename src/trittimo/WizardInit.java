@@ -12,6 +12,7 @@ public class WizardInit {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		WizardPanel panel = new WizardPanel();
+		panel.addEntity(new WilkinWizard());
 
 		frame.add(panel);
 
